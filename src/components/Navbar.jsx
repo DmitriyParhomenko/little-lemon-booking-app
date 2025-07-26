@@ -47,7 +47,7 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        
+
         <div
           className={`${isMenuOpen ? '' : 'hidden'} w-full md:block md:w-auto`}
           id="navbar-default"
@@ -69,7 +69,7 @@ const Navbar = () => {
                       isActive ? 'md:dark:text-[#EE9972]' : ''
                     }`
                   }
-                  onClick={() => setIsMenuOpen(false)} // auto-close on mobile click
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {label}
                 </NavLink>

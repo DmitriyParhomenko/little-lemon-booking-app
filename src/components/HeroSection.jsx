@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import heroImage from '../assets/greek_salad.jpg';
 
 const HeroSection = () => {
   return (
@@ -6,12 +8,21 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-4xl font-bold mb-4">Little Lemon</h1>
-          <h2 className="text-2xl font-medium mb-4">Chicago</h2>
-          <p className="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button className="bg-[#F4CE14] text-black px-6 py-3 rounded-lg font-semibold">Reserve a Table</button>
+          <h2 className="text-2xl font-medium mb-4">A taste of the Mediterranean in the heart of Chicago</h2>
+          <p className="mb-6">Fresh, vibrant, and rooted in tradition — experience delicious moments inspired by authentic recipes and warm hospitality.</p>
+          <Link
+            to="/reservations"
+            className="bg-[#F4CE14] text-black px-6 py-3 rounded-lg font-semibold hover:text-[#495E57] hover:bg-[#fff] transition"
+          >
+            <span>Reserve a Table</span>
+          </Link>
         </div>
-        <div>
-          <div className="bg-gray-200 h-64 w-full rounded-lg"></div>
+        <div className="hero-image">
+          <img
+            src={heroImage}
+            alt="Little Lemon Restaurant"
+            className="h-64 w-full object-cover rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>
