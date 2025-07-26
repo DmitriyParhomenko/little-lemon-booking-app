@@ -1,38 +1,34 @@
 import React from 'react';
-import aboutImage1 from '../assets/restaurant-chef.jpg';
-import aboutImage2 from '../assets/restaurant.jpg';
+import { Link } from 'react-router-dom';
+import heroImage from '../assets/greek_salad.jpg';
+// import aboutImage1 from '../assets/restaurant-chef.jpg';
+// import aboutImage2 from '../assets/restaurant.jpg';
 
 const AboutSection = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-12">
-
-        <div className="flex-1">
-          <h1 className="text-5xl font-extrabold text-black mb-2">Little Lemon</h1>
-          <h2 className="text-2xl text-gray-600 mb-6">Chicago</h2>
-          <p className="text-black font-medium mb-4 leading-relaxed">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+    <section className="bg-white py-16 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 className="text-4xl font-bold mb-4">Little Lemon</h2>
+          <h2 className="text-2xl font-medium mb-4">A taste of the Mediterranean in the heart of Chicago</h2>
+          <p className="mb-6">
+            At Little Lemon, we don’t just serve food — we serve connection.
+            Bright ingredients, bold traditions, and a dash of soul in every dish.
+            Whether you're stopping in for lunch or celebrating something special,
+            you’re always welcome at our table.
           </p>
-          <p className="text-black font-medium leading-relaxed mb-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit.
-          </p>
-          <button className="bg-[#495E57] text-white px-6 py-2 rounded-lg hover:bg-[#3c4f48] transition duration-300">
-            Learn More
-          </button>
+          <Link
+            to="/about"
+            className="border border-[#F4CE14] bg-[#F4CE14] text-black px-6 py-3 rounded-lg font-semibold hover:text-[#495E57] hover:bg-[#fff] transition"
+          >
+            <span>About Us</span>
+          </Link>
         </div>
-
-        <div className="flex-1 relative w-full md:w-[400px] h-[400px]">
+        <div className="hero-image">
           <img
-            src={aboutImage1}
-            alt="Little Lemon Interior"
-            className="absolute top-16 left-16 w-[200px] h-[200px] object-cover rounded-lg shadow-md"
-          />
-          <img
-            src={aboutImage2}
-            alt="Little Lemon Chef"
-            className="absolute top-0 left-0 w-[300px] h-[300px] object-cover rounded-lg shadow-lg z-10"
+            src={heroImage}
+            alt="Little Lemon Restaurant"
+            className="h-64 w-full object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

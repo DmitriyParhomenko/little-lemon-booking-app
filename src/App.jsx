@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
@@ -8,13 +8,12 @@ import OrderOnline from './pages/OrderOnline';
 import Login from './pages/Login';
 import BookingConfirmed from './pages/BookingConfirmed';
 import Navbar from './components/Navbar';
-import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <main>
         <Routes>
@@ -29,8 +28,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <AboutSection />
       <Footer />
-    </Router>
+    </>
   );
 }

@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#495E57" />
+  <meta name="description" content="Little Lemon — A family-owned Mediterranean restaurant in the heart of Chicago, serving fresh and flavorful dishes with warm hospitality." />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Little Lemon | Mediterranean Restaurant in Chicago</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Little Lemon | Mediterranean Restaurant in Chicago" />
+  <meta property="og:description" content="Fresh, vibrant Mediterranean cuisine with a modern twist — right in the heart of Chicago." />
+  <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+  <meta property="og:url" content="https://littlelemoncafe.com/" />
+  <meta property="og:site_name" content="Little Lemon" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Little Lemon | Mediterranean Restaurant in Chicago" />
+  <meta name="twitter:description" content="A family-owned Mediterranean restaurant offering delicious traditional dishes and cozy hospitality." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+  <meta name="twitter:site" content="@LittleLemon" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Little Lemon",
+      "image": "https://littlelemoncafe.com/logo512.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60601",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-312-555-0123",
+      "servesCuisine": "Mediterranean",
+      "url": "https://littlelemoncafe.com",
+      "priceRange": "$$",
+      "description": "Little Lemon is a family-owned Mediterranean restaurant in Chicago offering fresh and vibrant dishes with warm hospitality."
+    }
+  </script>
+</head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

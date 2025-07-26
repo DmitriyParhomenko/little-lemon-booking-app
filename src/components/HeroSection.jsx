@@ -12,7 +12,7 @@ const HeroSection = () => {
           <p className="mb-6">Fresh, vibrant, and rooted in tradition — experience delicious moments inspired by authentic recipes and warm hospitality.</p>
           <Link
             to="/reservations"
-            className="bg-[#F4CE14] text-black px-6 py-3 rounded-lg font-semibold hover:text-[#495E57] hover:bg-[#fff] transition"
+            className="border border-[#F4CE14] bg-[#F4CE14] text-black px-6 py-3 rounded-lg font-semibold hover:text-[#495E57] hover:bg-[#fff] transition"
           >
             <span>Reserve a Table</span>
           </Link>
