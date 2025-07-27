@@ -1,5 +1,7 @@
 # 🍋 Little Lemon Booking App
 
+![Preview](./src/assets/prev.jpg)
+
 A responsive React-based reservation system for the Little Lemon restaurant, developed as part of the Meta Front-End Developer Capstone project.
 
 ## Pages
