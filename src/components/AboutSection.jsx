@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/greek_salad.jpg';
-// import aboutImage1 from '../assets/restaurant-chef.jpg';
-// import aboutImage2 from '../assets/restaurant.jpg';
 
 const AboutSection = () => {
   return (

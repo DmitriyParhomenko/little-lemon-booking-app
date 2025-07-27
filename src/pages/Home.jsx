@@ -2,7 +2,6 @@ import React from 'react';
 import Specials from '../components/Specials';
 import Testimonials from '../components/Testimonials';
 import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
         <HeroSection />
         <Specials />
         <Testimonials />
-        <AboutSection />
       </main>
     </>
   );

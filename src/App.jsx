@@ -8,6 +8,7 @@ import OrderOnline from './pages/OrderOnline';
 import Login from './pages/Login';
 import BookingConfirmed from './pages/BookingConfirmed';
 import Navbar from './components/Navbar';
+import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 
@@ -28,6 +29,8 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
+      <AboutSection />
       <Footer />
     </>
   );

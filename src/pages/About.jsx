@@ -10,7 +10,7 @@ const About = () => (
         content="Learn more about Little Lemon, a family-owned Mediterranean restaurant in Chicago offering fresh, traditional dishes with a modern twist."
       />
     </Helmet>
-    <section className="bg-white text-gray-800 py-16 px-4">
+    <section className="max-w-7xl mx-auto bg-white text-gray-800 py-16 px-4">
       <div className="mx-auto space-y-6">
         <h1 className="text-3xl md:text-4xl font-bold text-[#495E57]">About Us</h1>
 
