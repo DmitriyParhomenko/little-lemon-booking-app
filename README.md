@@ -4,6 +4,14 @@
 
 A responsive React-based reservation system for the Little Lemon restaurant, developed as part of the Meta Front-End Developer Capstone project.
 
+## Reserve a Table
+
+![Preview](./src/assets/reserve.jpg)
+
+## Booking Confirmed!
+
+![Preview](./src/assets/confirmed.jpg)
+
 ## Pages
 
 - ```/``` — Home
@@ -36,6 +44,17 @@ Built with Formik and Yup for state management and validation
 - ```fetchAPI(date)``` to retrieve available time slots
 - ```submitAPI(formData)``` to simulate booking submission
 
+## Run Production Build Locally with `serve`
+
+To preview the production build locally, use a proper static file server like [`serve`](https://www.npmjs.com/package/serve).
+
+### Install and Run
+
+```
+npm install -g serve
+serve -s build
+```
+
 ## Testing
 
 Unit tests with React Testing Library:
@@ -46,7 +65,7 @@ Unit tests with React Testing Library:
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -54,7 +73,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.

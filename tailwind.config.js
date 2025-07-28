@@ -8,6 +8,9 @@ module.exports = {
       borderRadius: {
         lg: '16px',
       },
+      fontSize: {
+        '4xl': '40px',
+      },
     },
   },
   plugins: [],

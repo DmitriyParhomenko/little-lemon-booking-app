@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Reservations from '../Reservations';
 
 beforeAll(() => {
@@ -14,9 +15,11 @@ beforeAll(() => {
 describe('Reserve a Table Form Validation', () => {
   const setup = () => {
     render(
-      <BrowserRouter>
-        <Reservations />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <Reservations />
+        </BrowserRouter>
+      </HelmetProvider>
     );
   };
 

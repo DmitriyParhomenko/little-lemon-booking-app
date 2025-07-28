@@ -58,7 +58,7 @@ const Specials = () => {
                 <h3 className="font-bold text-lg">{item.title}</h3>
                 <span className="text-[#EE9972] font-medium">{item.price}</span>
               </div>
-              <p className="text-sm mb-2 min-h-[80px]">{item.description}</p>
+              <p className="mb-2 md:min-h-[100px]">{item.description}</p>
               <Link
                 to="/reservations"
                 className="mt-auto text-sm font-medium text-green-800 hover:underline transition"

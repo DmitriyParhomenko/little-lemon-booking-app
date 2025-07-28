@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     rating: '⭐️⭐️⭐️⭐️⭐️',
     name: 'James T.',
-    text: 'Absolutely delicious! The food tastes like it came straight from the Mediterranean coast. Cozy place and amazing staff.',
+    text: 'Absolutely delicious! The food tastes like it came straight from the Mediterranean coast.',
     image: review1
   },
   {
@@ -39,7 +39,7 @@ const Testimonials = () => {
   return (
     <section className="py-16 px-4 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#495E57]">Testimonials</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Testimonials</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {testimonials.map((item) => (
             <div key={item.id} className="p-6 border rounded-xl text-center bg-white shadow-sm hover:shadow-md transition">
@@ -50,7 +50,7 @@ const Testimonials = () => {
               />
               <p className="text-yellow-500 mb-1">{item.rating}</p>
               <p className="font-semibold text-[#333]">{item.name}</p>
-              <p className="text-sm mt-2 text-gray-600">{item.text}</p>
+              <p className="mt-2 text-gray-600">{item.text}</p>
             </div>
           ))}
         </div>

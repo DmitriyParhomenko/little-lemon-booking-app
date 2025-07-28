@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { fetchAPI, submitAPI } from '../api/api';
+import { Helmet } from 'react-helmet-async';
 
 export const initializeTimes = () => {
   const today = new Date();
@@ -52,76 +53,85 @@ const Reservations = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-16 px-4 bg-white shadow-lg rounded-xl">
-      <h1 className="text-4xl font-bold mb-8 text-center text-[#495E57]">Reserve a Table</h1>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ values, setFieldValue }) => (
-          <Form className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block mb-2 font-medium text-gray-700">Name</label>
-              <Field
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
-              />
-              <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1" />
-            </div>
-            <div>
-              <label htmlFor="date" className="block mb-2 font-medium text-gray-700">Date</label>
-              <Field
-                type="date"
-                id="date"
-                name="date"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
-                onChange={(e) => {
-                  const selectedDate = e.target.value;
-                  setFieldValue('date', selectedDate);
-                  dispatch(selectedDate);
-                }}
-              />
-              <ErrorMessage name="date" component="p" className="text-red-500 text-sm mt-1" />
-            </div>
-            <div>
-              <label htmlFor="time" className="block mb-2 font-medium text-gray-700">Time</label>
-              <Field
-                as="select"
-                id="time"
-                name="time"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
-              >
-                <option value="">Select a time</option>
-                {availableTimes.map((time) => (
-                  <option key={time} value={time}>{time}</option>
-                ))}
-              </Field>
-              <ErrorMessage name="time" component="p" className="text-red-500 text-sm mt-1" />
-            </div>
-            <div>
-              <label htmlFor="guests" className="block mb-2 font-medium text-gray-700">Number of Guests</label>
-              <Field
-                type="number"
-                id="guests"
-                name="guests"
-                min="1"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
-              />
-              <ErrorMessage name="guests" component="p" className="text-red-500 text-sm mt-1" />
-            </div>
-            <button type="submit" className="w-full bg-[#495E57] hover:bg-[#3e4e4a] text-white py-3 font-semibold rounded-md transition duration-200">
-              Book Now
-            </button>
-          </Form>
-        )}
-      </Formik>
-    </div>
+    <>
+      <Helmet>
+        <title>Reserve a Table | Little Lemon</title>
+        <meta
+          name="description"
+          content="Book your table at Little Lemon and enjoy an unforgettable Mediterranean dining experience in the heart of Chicago."
+        />
+      </Helmet>
+      <div className="max-w-xl mx-auto py-16 m-20 px-4 bg-white shadow-lg rounded-xl">
+        <h1 className="text-4xl font-bold mb-8 text-center">Reserve a Table</h1>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ values, setFieldValue }) => (
+            <Form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block mb-2 font-medium text-gray-700">Name</label>
+                <Field
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
+                />
+                <ErrorMessage name="name" component="p" className="text-red-500 text-sm mt-1" />
+              </div>
+              <div>
+                <label htmlFor="date" className="block mb-2 font-medium text-gray-700">Date</label>
+                <Field
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
+                  onChange={(e) => {
+                    const selectedDate = e.target.value;
+                    setFieldValue('date', selectedDate);
+                    dispatch(selectedDate);
+                  }}
+                />
+                <ErrorMessage name="date" component="p" className="text-red-500 text-sm mt-1" />
+              </div>
+              <div>
+                <label htmlFor="time" className="block mb-2 font-medium text-gray-700">Time</label>
+                <Field
+                  as="select"
+                  id="time"
+                  name="time"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
+                >
+                  <option value="">Select a time</option>
+                  {availableTimes.map((time) => (
+                    <option key={time} value={time}>{time}</option>
+                  ))}
+                </Field>
+                <ErrorMessage name="time" component="p" className="text-red-500 text-sm mt-1" />
+              </div>
+              <div>
+                <label htmlFor="guests" className="block mb-2 font-medium text-gray-700">Number of Guests</label>
+                <Field
+                  type="number"
+                  id="guests"
+                  name="guests"
+                  min="1"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#495E57]"
+                />
+                <ErrorMessage name="guests" component="p" className="text-red-500 text-sm mt-1" />
+              </div>
+              <button type="submit" className="w-full bg-[#495E57] hover:bg-[#3e4e4a] text-white py-3 font-semibold rounded-md transition duration-200">
+                Book Now
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </>
   );
 };
 
