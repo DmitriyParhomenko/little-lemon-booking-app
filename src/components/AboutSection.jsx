@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/greek_salad.jpg';
+import aboutImage from '../assets/restauranfood.jpg';
 
 const AboutSection = () => {
   return (
@@ -24,9 +24,9 @@ const AboutSection = () => {
         </div>
         <div className="hero-image">
           <img
-            src={heroImage}
+            src={aboutImage}
             alt="Little Lemon Restaurant"
-            className="h-64 w-full object-cover rounded-lg shadow-lg"
+            className="h-80 w-full object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>
